@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+</head>
+<body>
+    <h1>All Products</h1>
+    <ul>
+        {{#each results}}
+            <li>{{name}}
+                <br>
+                <img src="{{picture}}" alt="" width="150" height="100">
+                <a href="/delete?id={{_id}}" onclick="return confirm('are you mad?')">Delete</a>
+                <a href="/edit?id={{_id}}" style="color: orange;">Edit</a>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
